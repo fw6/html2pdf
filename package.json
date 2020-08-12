@@ -1,5 +1,5 @@
 {
-    "name": "html2pdf",
+    "name": "@fw/html2pdf",
     "version": "1.0.0",
     "description": "html字符串生成pdf文件的命令行工具，基于puppeteer.js.",
     "main": "./src/index.ts",

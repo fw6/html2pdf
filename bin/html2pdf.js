@@ -64,9 +64,8 @@ async function main () {
         })
     }
 
-    await page.pdf({ path: 'html.pdf', format: 'A4' })
-    // console.log(res)
-    // await browser.close()
+    await page.pdf({ path: 'html.pdf', format: 'A4', printBackground: true })
+    await browser.close()
 
     console.log('start game')
 }

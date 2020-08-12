@@ -28,7 +28,7 @@ if (!program.path) {
 
 async function main () {
     // 移除上次结果
-    fse.removeSync(path.join(__dirname, 'html.pdf'))
+    fse.removeSync(path.join(__dirname, '../', 'html.pdf'))
     // process.exit()
 
     const { path: htmlPath, headerTemplate, footerTemplate, landscape } = program
@@ -44,14 +44,15 @@ async function main () {
     // await page.goto('https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pdf')
     // await page.pdf({ path: 'api.pdf', format: 'A4' })
 
-    const contentPath = path.join(__dirname, './static/yyyy.html')
+    const contentPath = path.join(__dirname, '../', htmlPath)
+    // const contentPath = path.join(__dirname, './static/yyyy.html')
 
     // 2. Create PDF from static HTML
     const htmlContent = fse.readFileSync(contentPath)
     const basicStylePaths = [
-        path.join(__dirname, './public/css/froala_style.min.css'),
-        path.join(__dirname, './public/css/froala_editor.pkgd.min.css'),
-        path.join(__dirname, './public/css/froala_print.min.css')
+        path.join(__dirname, '../', './public/css/froala_style.min.css'),
+        path.join(__dirname, '../', './public/css/froala_editor.pkgd.min.css'),
+        path.join(__dirname, '../', './public/css/froala_print.min.css')
     ]
 
     await page.setContent(htmlContent.toString())

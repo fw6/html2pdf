@@ -1,5 +1,5 @@
 {
-    "name": "@fw/html2pdf",
+    "name": "html2pdf",
     "version": "1.0.0",
     "description": "html字符串生成pdf文件的命令行工具，基于puppeteer.js.",
     "main": "./src/index.ts",
@@ -11,13 +11,19 @@
     "license": "MIT",
     "private": false,
     "bin": {
-        "html2pdf": "./bin/html2pdf.js"
+        "html2pdf": "./index.js"
     },
     "dependencies": {
         "chalk": "^4.1.0",
+        "clear": "^0.1.0",
+        "clui": "^0.3.6",
         "commander": "^6.0.0",
+        "configstore": "^5.0.1",
         "dayjs": "^1.8.33",
+        "figlet": "^1.5.0",
         "fs-extra": "^9.0.1",
+        "inquirer": "^7.3.3",
+        "minimist": "^1.2.5",
         "puppeteer": "^5.2.1"
     }
 }
